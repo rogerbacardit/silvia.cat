@@ -5,5 +5,16 @@ html
     link rel="stylesheet" href="/stylesheets/application.css"
   body
     #container
+      
+      #sidebar
+        == render partial: 'sidebar'
+
       #content
-        == yield
+        #header
+          == render partial: 'header'
+        #header_submenu
+          == render partial: 'header_submenu'
+        == render partial: 'content'
+
+        #content_large_image
+          == render partial: 'large_img_gallery'
